@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+<link rel="stylesheet" href="{% static 'blist.css' %}">
+
+  <title>List of Bnbs</title>
+</head>
+<body>
+<header>
+
+  <div class="nav_container">
+    <nav>
+      <ul>
+        <li><a href="bnb/rental/templates/rental/bnb_list.html"></a>HOME</li>
+        <li><a href="bnb/rental/templates/rental/booking_create.html"></a>BOOKING</li>
+        <li><a href="bnb/rental/templates/rental/review_list.html"></a>REVIEWS</li>
+        <li><a href="bnb/rental/templates/rental/user_create.html"></a>sign up</li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="sidebar">
+  <h2> sidebar </h2>
+      <ul>
+        <li><a href="bnb/rental/templates/rental/booking_list.html"></a>booked_bnb's</li>
+        <li><a href="bnb/rental/templates/rental/review_create.html"></a>create_review</li>
+        <li><a href="bnb/rental/templates/rental/user_list.html"></a>Users</li>
+
+
+      </ul>
+
+  </div>
+
+</header>
+  <h2>Bnb's available</h2>
+
+  <ul>
+    {% for bnb in bnbs %}
+      <li>{{ bnb.title }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

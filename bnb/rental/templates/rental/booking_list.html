@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'booklist.css' %}">
+
+  <title>List of Bookings</title>
+</head>
+<body>
+  <h2>List of Bookings</h2>
+  <ul>
+    {% for booking in bookings %}
+      <li>{{ booking.user.username }} - {{ booking.bnb.title }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'bcreate.css' %}">
+
+  <title>Create Bnb</title>
+</head>
+<body>
+  <h2>Create Bnb</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Create</button>
+  </form>
+</body>
+</html>
+
+
